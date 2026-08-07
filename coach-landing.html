@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CORE for Coaches — Get Booked. Get Paid. Grow.</title>
+  <meta name="description" content="Run your coaching business from one simple platform. Bookings, payments, memberships, clients and your website for £25/month with CORE by fibodo.">
+  <meta property="og:title" content="CORE for Coaches — Your coaching business, in one place">
+  <meta property="og:description" content="Get booked, get paid and keep clients coming back for £25/month.">
+  <meta property="og:image" content="images/CORE_Social_Sharing_Image_001.jpg">
+  <meta name="theme-color" content="#101a1b">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #112022;
+      --muted: #5d6a6b;
+      --paper: #f7f8f3;
+      --white: #fff;
+      --lime: #d8ff3e;
+      --lime-dark: #bbeb00;
+      --mint: #dff6e5;
+      --line: rgba(17, 32, 34, .13);
+      --shadow: 0 24px 70px rgba(10, 25, 25, .14);
+      --radius: 26px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.menu-open { overflow: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    .skip-link { position: fixed; left: 12px; top: -80px; z-index: 999; background: var(--lime); padding: 12px 18px; font-weight: 800; }
+    .skip-link:focus { top: 12px; }
+
+    .campaign-bar {
+      padding: 9px 20px;
+      color: var(--white);
+      background: var(--ink);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+    .campaign-bar strong { color: var(--lime); }
+
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      background: rgba(247, 248, 243, .9);
+      border-bottom: 1px solid transparent;
+      backdrop-filter: blur(16px);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .site-header.scrolled { border-color: var(--line); box-shadow: 0 8px 30px rgba(17,32,34,.06); }
+    .nav { min-height: 74px; display: flex; align-items: center; gap: 34px; }
+    .brand { display: inline-flex; width: 128px; margin-right: auto; }
+    .brand img { width: 100%; height: auto; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { text-decoration: none; font-size: 14px; font-weight: 700; }
+    .nav-links a:hover { opacity: .62; }
+    .btn {
+      display: inline-flex;
+      min-height: 54px;
+      padding: 0 24px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      box-shadow: 0 9px 0 rgba(4, 16, 17, .11);
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      line-height: 1.15;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 0 rgba(4,16,17,.13); background: #e2ff6b; }
+    .btn:active { transform: translateY(2px); box-shadow: 0 5px 0 rgba(4,16,17,.13); }
+    .btn-dark { color: var(--white); background: var(--ink); box-shadow: none; }
+    .btn-dark:hover { color: var(--ink); background: var(--lime); box-shadow: none; }
+    .btn-small { min-height: 44px; padding-inline: 20px; font-size: 14px; box-shadow: none; }
+    .menu-button { display: none; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--ink); color: white; font-weight: 800; }
+
+    .hero { position: relative; overflow: hidden; padding: 66px 0 88px; }
+    .hero::before {
+      position: absolute;
+      width: 580px;
+      height: 580px;
+      right: -220px;
+      top: -180px;
+      border-radius: 50%;
+      background: var(--lime);
+      content: "";
+      filter: blur(2px);
+      opacity: .68;
+    }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.02fr .98fr; gap: 66px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 18px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { width: 27px; height: 3px; background: currentColor; content: ""; }
+    h1, h2, h3 { margin-top: 0; font-family: "Manrope", sans-serif; letter-spacing: -.045em; }
+    h1 { max-width: 730px; margin-bottom: 24px; font-size: clamp(49px, 6vw, 82px); line-height: .98; }
+    h1 em { position: relative; color: transparent; font-style: normal; -webkit-text-stroke: 2px var(--ink); }
+    h1 em::after { position: absolute; left: 2px; right: 0; bottom: -5px; height: 10px; border-radius: 60%; background: var(--lime); content: ""; z-index: -1; transform: rotate(-1.5deg); }
+    .hero-lead { max-width: 590px; margin: 0 0 28px; color: #39494a; font-size: clamp(18px, 2vw, 21px); line-height: 1.55; }
+    .hero-lead strong { color: var(--ink); }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 15px 20px; }
+    .microcopy { color: var(--muted); font-size: 13px; line-height: 1.4; }
+    .tick-row { display: flex; flex-wrap: wrap; gap: 11px 22px; margin: 32px 0 0; padding: 0; list-style: none; }
+    .tick-row li { display: flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 700; }
+    .tick-row li::before { display: grid; width: 19px; height: 19px; border-radius: 50%; background: var(--ink); color: var(--lime); content: "✓"; place-items: center; font-size: 11px; }
+
+    .hero-visual { position: relative; min-height: 610px; }
+    .hero-photo { position: absolute; inset: 0 5% 0 10%; overflow: hidden; border-radius: 190px 190px 34px 34px; background: #9dbbae; box-shadow: var(--shadow); }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 52% center; }
+    .hero-photo::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(9,23,24,.35)); content: ""; }
+    .result-card { position: absolute; z-index: 2; padding: 20px; border: 1px solid rgba(255,255,255,.7); border-radius: 20px; background: rgba(255,255,255,.92); box-shadow: 0 18px 45px rgba(6,20,21,.18); backdrop-filter: blur(12px); }
+    .result-card strong { display: block; margin-top: 5px; font: 800 25px/1 "Manrope", sans-serif; letter-spacing: -.04em; }
+    .result-card span { color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .result-card small { display: block; margin-top: 7px; color: #667273; }
+    .card-booking { left: 0; bottom: 63px; }
+    .card-payment { right: 0; top: 76px; }
+    .pulse { display: inline-block; width: 8px; height: 8px; margin-right: 4px; border-radius: 50%; background: #28b26f; box-shadow: 0 0 0 6px rgba(40,178,111,.13); }
+
+    .proof-strip { background: var(--ink); color: var(--white); }
+    .proof-grid { display: grid; grid-template-columns: 1.25fr repeat(3, 1fr); min-height: 150px; align-items: stretch; }
+    .proof-intro, .proof-item { display: flex; padding: 32px; flex-direction: column; justify-content: center; border-right: 1px solid rgba(255,255,255,.12); }
+    .proof-intro { padding-left: 0; }
+    .proof-intro strong { font: 700 clamp(22px, 2.5vw, 30px)/1.2 "Manrope", sans-serif; }
+    .proof-intro span { margin-top: 8px; color: #b7c2c2; font-size: 14px; }
+    .proof-item:last-child { border: 0; }
+    .proof-item b { color: var(--lime); font: 800 30px/1 "Manrope", sans-serif; }
+    .proof-item span { margin-top: 8px; color: #d8dfdf; font-size: 14px; }
+
+    .section { padding: 110px 0; }
+    .section-heading { max-width: 750px; margin: 0 auto 55px; text-align: center; }
+    .section-heading .eyebrow { color: #647071; }
+    .section-heading h2, .split-copy h2, .price-copy h2 { margin-bottom: 19px; font-size: clamp(37px, 5vw, 60px); line-height: 1.05; }
+    .section-heading p, .split-copy > p, .price-copy > p { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.65; }
+
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .pain-card { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); transition: transform .25s, box-shadow .25s; }
+    .pain-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(17,32,34,.08); }
+    .pain-card span { display: grid; width: 48px; height: 48px; margin-bottom: 34px; border-radius: 15px; background: var(--mint); place-items: center; font-size: 22px; }
+    .pain-card h3 { margin-bottom: 11px; font-size: 23px; }
+    .pain-card p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+    .solution { background: #edf1e9; }
+    .split { display: grid; grid-template-columns: .95fr 1.05fr; gap: 80px; align-items: center; }
+    .split-visual { position: relative; min-height: 590px; }
+    .split-image { position: absolute; inset: 0 11% 0 0; overflow: hidden; border-radius: 32px; box-shadow: var(--shadow); }
+    .split-image img { width: 100%; height: 100%; object-fit: cover; }
+    .week-card { position: absolute; right: 0; bottom: 44px; width: min(300px, 76%); padding: 22px; border-radius: 22px; background: var(--white); box-shadow: var(--shadow); }
+    .week-card .week-head { display: flex; justify-content: space-between; margin-bottom: 18px; font-size: 13px; font-weight: 800; }
+    .week-card .week-head em { color: #238b59; font-style: normal; }
+    .booking-row { display: grid; grid-template-columns: 42px 1fr auto; gap: 11px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line); }
+    .booking-row i { display: grid; width: 42px; height: 42px; border-radius: 12px; background: var(--mint); place-items: center; color: #267552; font-style: normal; font-weight: 800; }
+    .booking-row b { display: block; font-size: 13px; }
+    .booking-row small { color: var(--muted); }
+    .booking-row > small { color: #267552; font-weight: 800; }
+    .benefit-list { display: grid; gap: 23px; margin: 38px 0; padding: 0; list-style: none; }
+    .benefit-list li { position: relative; padding-left: 52px; }
+    .benefit-list li::before { position: absolute; left: 0; top: -4px; display: grid; width: 36px; height: 36px; border-radius: 50%; background: var(--lime); content: "✓"; place-items: center; font-weight: 900; }
+    .benefit-list strong { display: block; margin-bottom: 4px; font: 800 17px/1.25 "Manrope", sans-serif; }
+    .benefit-list span { color: var(--muted); line-height: 1.5; }
+
+    .journey { background: var(--white); }
+    .steps { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
+    .steps::before { position: absolute; top: 29px; left: 16%; right: 16%; height: 2px; background: var(--line); content: ""; }
+    .step { position: relative; text-align: center; }
+    .step-number { position: relative; z-index: 1; display: grid; width: 60px; height: 60px; margin: 0 auto 25px; border: 7px solid var(--white); border-radius: 50%; background: var(--ink); color: var(--lime); place-items: center; font: 800 18px "Manrope", sans-serif; box-sizing: content-box; }
+    .step h3 { margin-bottom: 10px; font-size: 23px; }
+    .step p { max-width: 310px; margin: auto; color: var(--muted); line-height: 1.6; }
+
+    .included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 48px; }
+    .included-item { display: flex; gap: 18px; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.58); }
+    .included-item > span { display: grid; width: 44px; height: 44px; flex: 0 0 44px; border-radius: 13px; background: var(--ink); color: var(--lime); place-items: center; font-size: 18px; }
+    .included-item h3 { margin: 1px 0 5px; font-size: 18px; letter-spacing: -.02em; }
+    .included-item p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+    .pricing { overflow: hidden; background: var(--ink); color: var(--white); }
+    .pricing-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: center; }
+    .price-copy .eyebrow { color: var(--lime); }
+    .price-copy > p { color: #bcc7c7; }
+    .price-copy blockquote { margin: 34px 0 0; padding: 0 0 0 23px; border-left: 3px solid var(--lime); color: #e8eded; font: 600 18px/1.55 "Manrope", sans-serif; }
+    .price-card { position: relative; padding: 44px; border: 1px solid rgba(255,255,255,.18); border-radius: 32px; background: #18292a; box-shadow: 0 30px 80px rgba(0,0,0,.28); }
+    .price-card::before { position: absolute; width: 230px; height: 230px; right: -90px; top: -90px; border-radius: 50%; background: var(--lime); content: ""; filter: blur(80px); opacity: .17; }
+    .price-label { display: flex; justify-content: space-between; align-items: center; color: #c8d1d1; font-size: 14px; font-weight: 700; }
+    .price-label b { padding: 7px 10px; border-radius: 999px; background: rgba(216,255,62,.12); color: var(--lime); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+    .price { display: flex; margin: 24px 0 25px; align-items: end; font: 800 clamp(61px, 8vw, 90px)/.8 "Manrope", sans-serif; letter-spacing: -.07em; }
+    .price small { margin: 0 0 8px 12px; color: #aebaba; font: 500 16px "DM Sans", sans-serif; letter-spacing: 0; }
+    .price-list { display: grid; gap: 14px; margin: 0 0 30px; padding: 25px 0; border-block: 1px solid rgba(255,255,255,.13); list-style: none; }
+    .price-list li { display: flex; gap: 10px; color: #e2e8e8; }
+    .price-list li::before { color: var(--lime); content: "✓"; font-weight: 900; }
+    .price-card .btn { width: 100%; }
+    .price-card .microcopy { display: block; margin-top: 18px; color: #aebaba; text-align: center; }
+
+    .faq { background: var(--white); }
+    .faq-wrap { width: min(100%, 820px); margin: auto; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-question { display: flex; width: 100%; padding: 25px 0; align-items: center; justify-content: space-between; gap: 20px; border: 0; background: none; color: var(--ink); cursor: pointer; font: 800 18px/1.3 "Manrope", sans-serif; text-align: left; }
+    .faq-question span { display: grid; width: 30px; height: 30px; flex: 0 0 30px; border: 1px solid var(--line); border-radius: 50%; place-items: center; transition: transform .2s, background .2s; }
+    .faq-question[aria-expanded="true"] span { background: var(--lime); transform: rotate(45deg); }
+    .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
+    .faq-answer > div { overflow: hidden; }
+    .faq-answer p { margin: 0; padding: 0 50px 25px 0; color: var(--muted); line-height: 1.65; }
+    .faq-question[aria-expanded="true"] + .faq-answer { grid-template-rows: 1fr; }
+
+    .final { padding: 95px 0; background: var(--lime); text-align: center; }
+    .final h2 { max-width: 870px; margin: 0 auto 21px; font-size: clamp(40px, 6vw, 70px); line-height: 1; }
+    .final p { max-width: 620px; margin: 0 auto 30px; font-size: 19px; line-height: 1.6; }
+
+    footer { padding: 31px 0; background: #0b1617; color: #aab6b6; }
+    .footer-row { display: flex; align-items: center; gap: 20px; font-size: 13px; }
+    .footer-row .brand { width: 112px; filter: invert(1) brightness(4); opacity: .9; }
+    .footer-row p { margin-left: auto; }
+
+    .mobile-cta { display: none; }
+    [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    [data-reveal].visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } [data-reveal] { opacity: 1; transform: none; transition: none; } * { animation: none !important; } }
+
+    @media (max-width: 900px) {
+      .nav-links { position: fixed; inset: 109px 0 auto; display: none; padding: 25px 20px 32px; flex-direction: column; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 25px 40px rgba(17,32,34,.1); }
+      .nav-links.open { display: flex; }
+      .nav .btn-small { display: none; }
+      .menu-button { display: block; }
+      .hero-grid, .split, .pricing-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 50px; }
+      .hero-copy { text-align: center; }
+      .hero-lead { margin-inline: auto; }
+      .hero-actions, .tick-row { justify-content: center; }
+      .hero-visual { min-height: 540px; width: min(100%, 620px); margin: auto; }
+      .hero-photo { inset-inline: 8%; }
+      .proof-grid { grid-template-columns: repeat(3,1fr); }
+      .proof-intro { grid-column: 1/-1; padding: 28px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); text-align: center; }
+      .proof-item { padding: 28px 18px; text-align: center; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .pain-card { display: grid; grid-template-columns: auto 1fr; gap: 0 20px; }
+      .pain-card span { grid-row: 1/3; margin: 0; }
+      .split { gap: 55px; }
+      .split-visual { min-height: 560px; }
+      .included-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      .campaign-bar { font-size: 11px; }
+      .nav { min-height: 65px; }
+      .nav-links { top: 99px; }
+      .brand { width: 115px; }
+      .hero { padding: 44px 0 58px; }
+      h1 { font-size: clamp(44px, 13.3vw, 61px); }
+      .hero-lead { font-size: 17px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-actions .microcopy { width: 100%; }
+      .tick-row { align-items: flex-start; flex-direction: column; width: fit-content; margin: 27px auto 0; }
+      .hero-visual { min-height: 430px; }
+      .hero-photo { inset: 0 4% 0 4%; border-radius: 130px 130px 26px 26px; }
+      .result-card { padding: 15px; }
+      .result-card strong { font-size: 19px; }
+      .result-card small { font-size: 10px; }
+      .card-booking { left: 0; bottom: 24px; }
+      .card-payment { right: 0; top: 52px; }
+      .proof-grid { grid-template-columns: 1fr; }
+      .proof-item { padding: 22px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+      .section { padding: 76px 0; }
+      .section-heading { margin-bottom: 37px; }
+      .section-heading h2, .split-copy h2, .price-copy h2 { font-size: 37px; }
+      .pain-card { padding: 23px; }
+      .pain-card span { width: 42px; height: 42px; }
+      .split-visual { min-height: 430px; }
+      .split-image { inset-right: 5%; }
+      .week-card { padding: 16px; width: 82%; bottom: -16px; }
+      .booking-row { grid-template-columns: 37px 1fr auto; }
+      .booking-row i { width: 37px; height: 37px; }
+      .steps { grid-template-columns: 1fr; gap: 35px; }
+      .steps::before { top: 0; bottom: 0; left: 29px; width: 2px; height: auto; }
+      .step { display: grid; grid-template-columns: 60px 1fr; gap: 0 18px; text-align: left; }
+      .step-number { grid-row: 1/3; margin: 0; border-width: 5px; }
+      .step p { margin: 0; }
+      .price-card { padding: 30px 22px; }
+      .final { padding: 76px 0 95px; }
+      .footer-row { justify-content: center; flex-wrap: wrap; text-align: center; }
+      .footer-row .brand { margin: 0; }
+      .footer-row p { width: 100%; margin: 0; }
+      .mobile-cta { position: fixed; z-index: 60; left: 10px; right: 10px; bottom: 10px; display: flex; padding: 8px 8px 8px 16px; align-items: center; justify-content: space-between; gap: 10px; border: 1px solid rgba(255,255,255,.15); border-radius: 999px; background: rgba(17,32,34,.95); color: white; box-shadow: 0 12px 40px rgba(0,0,0,.28); backdrop-filter: blur(12px); transform: translateY(120%); transition: transform .3s ease; }
+      .mobile-cta.visible { transform: translateY(0); }
+      .mobile-cta span { font-size: 12px; font-weight: 700; }
+      .mobile-cta strong { display: block; color: var(--lime); font-size: 15px; }
+      .mobile-cta .btn { min-height: 43px; padding-inline: 16px; box-shadow: none; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="campaign-bar">Your coaching business. One simple platform. <strong>Just £25/month.</strong></div>
+  <header class="site-header" data-header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="CORE by fibodo home"><img src="assets/logo.svg" alt="CORE by fibodo"></a>
+      <nav class="nav-links" id="primaryNav" aria-label="Primary navigation">
+        <a href="#why">Why CORE</a>
+        <a href="#included">What’s included</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <a class="btn btn-small" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" data-cta="header">Start for £25/month</a>
+      <button class="menu-button" type="button" aria-controls="primaryNav" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <span class="eyebrow">Built for independent coaches</span>
+          <h1>Stop doing admin. <em>Start building.</em></h1>
+          <p class="hero-lead">Give clients one easy place to book and pay—while you manage your diary, memberships, clients and website from one powerful platform. <strong>Everything you need for £25/month.</strong></p>
+          <div class="hero-actions">
+            <a class="btn" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" data-cta="hero">Build my coaching business <span aria-hidden="true">→</span></a>
+            <span class="microcopy">CORE is complete at £25/month<br>Optional packages only if you want them</span>
+          </div>
+          <ul class="tick-row" aria-label="Key benefits">
+            <li>Take bookings 24/7</li>
+            <li>Get paid online</li>
+            <li>Keep clients organised</li>
+          </ul>
+        </div>
+        <div class="hero-visual" data-reveal>
+          <div class="hero-photo"><img src="assets/Focused-in-the-gym-Male-2.webp" alt="Independent fitness coach working with a client"></div>
+          <div class="result-card card-payment"><span><i class="pulse"></i> Payment received</span><strong>Ready</strong><small>Online + in person</small></div>
+          <div class="result-card card-booking"><span>Today’s diary</span><strong>12 bookings</strong><small>Clients book themselves</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="CORE highlights">
+      <div class="container proof-grid">
+        <div class="proof-intro"><strong>Everything that keeps your business moving.</strong><span>No unnecessary complexity. No scattered systems.</span></div>
+        <div class="proof-item"><b>24/7</b><span>Your booking page keeps working</span></div>
+        <div class="proof-item"><b>1</b><span>Place for your day-to-day business</span></div>
+        <div class="proof-item"><b>£25</b><span>Simple monthly CORE price</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow">Your time should go into coaching</span>
+          <h2>Your business has outgrown the admin workaround.</h2>
+          <p>When bookings live in messages, payments need chasing and client details are everywhere, growth gets harder than it needs to be.</p>
+        </div>
+        <div class="pain-grid">
+          <article class="pain-card" data-reveal><span aria-hidden="true">◷</span><div><h3>Stop the diary ping-pong</h3><p>Let clients see your live availability and book the right session without the back-and-forth.</p></div></article>
+          <article class="pain-card" data-reveal><span aria-hidden="true">£</span><div><h3>Stop chasing payment</h3><p>Sell sessions, packs and memberships with a clear route to pay when clients book.</p></div></article>
+          <article class="pain-card" data-reveal><span aria-hidden="true">↗</span><div><h3>Start looking established</h3><p>Share one professional booking website that makes your coaching offer easy to understand and buy.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section solution" id="included">
+      <div class="container split">
+        <div class="split-visual" data-reveal>
+          <div class="split-image"><img src="assets/Fitness-app-dashboard-and-focused-trainer.webp" alt="Coach using digital tools to run their business" loading="lazy"></div>
+          <div class="week-card" aria-label="Example live diary">
+            <div class="week-head"><span>Your live diary</span><em>● Open for bookings</em></div>
+            <div class="booking-row"><i>09</i><div><b>1-to-1 coaching</b><small>Alex Morgan</small></div><small>Paid</small></div>
+            <div class="booking-row"><i>12</i><div><b>Strength session</b><small>4 places booked</small></div><small>Live</small></div>
+            <div class="booking-row"><i>18</i><div><b>Evening bootcamp</b><small>8 places booked</small></div><small>Live</small></div>
+          </div>
+        </div>
+        <div class="split-copy" data-reveal>
+          <span class="eyebrow">The business bit, built in</span>
+          <h2>One place to run the work behind the workout.</h2>
+          <p>CORE brings your essential business tools together, so every booking feels easier for your clients—and every day feels simpler for you.</p>
+          <ul class="benefit-list">
+            <li><strong>Bookings and scheduling</strong><span>Set when you work, what you sell and how many places are available.</span></li>
+            <li><strong>Payments, packs and memberships</strong><span>Give clients simple ways to buy and keep coming back.</span></li>
+            <li><strong>Client management and messages</strong><span>Keep the details you need organised in one reliable place.</span></li>
+            <li><strong>Your own booking website</strong><span>Share your offer with a clear, professional route from interest to booking.</span></li>
+          </ul>
+          <a class="btn btn-dark" href="#pricing">See everything for £25 <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow">Simple from day one</span>
+          <h2>From “message me” to a business that runs.</h2>
+        </div>
+        <div class="steps">
+          <article class="step" data-reveal><span class="step-number">01</span><div><h3>Set up your offer</h3><p>Add your services, availability, prices and the ways clients can work with you.</p></div></article>
+          <article class="step" data-reveal><span class="step-number">02</span><div><h3>Share your link</h3><p>Put your booking website in your bio, messages and wherever clients find you.</p></div></article>
+          <article class="step" data-reveal><span class="step-number">03</span><div><h3>Coach and grow</h3><p>Clients book and pay while you stay focused on delivering brilliant coaching.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="split-copy" data-reveal>
+          <span class="eyebrow">Serious tools. Sensible price.</span>
+          <h2>Built for the way independent coaches work.</h2>
+          <p>Whether you coach one-to-one, run classes or blend in-person and online sessions, CORE gives you the foundation to do it professionally.</p>
+          <div class="included-grid">
+            <article class="included-item"><span aria-hidden="true">▦</span><div><h3>Live diary</h3><p>Control your working day and availability.</p></div></article>
+            <article class="included-item"><span aria-hidden="true">◎</span><div><h3>Online payments</h3><p>Make buying your coaching straightforward.</p></div></article>
+            <article class="included-item"><span aria-hidden="true">♙</span><div><h3>Client records</h3><p>Keep customer details close at hand.</p></div></article>
+            <article class="included-item"><span aria-hidden="true">↗</span><div><h3>Booking website</h3><p>Turn visits into bookings around the clock.</p></div></article>
+            <article class="included-item"><span aria-hidden="true">∞</span><div><h3>Memberships</h3><p>Create ways for clients to stay with you.</p></div></article>
+            <article class="included-item"><span aria-hidden="true">✉</span><div><h3>Messages</h3><p>Keep important client communication together.</p></div></article>
+          </div>
+        </div>
+        <div class="split-visual" data-reveal>
+          <div class="split-image" style="inset:0"><img src="assets/Bootcamp.webp" alt="Coach leading a successful outdoor group session" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="container pricing-grid">
+        <div class="price-copy" data-reveal>
+          <span class="eyebrow">One clear starting point</span>
+          <h2>The tools to run your coaching business. Without the big-business price.</h2>
+          <p>Start with the complete CORE platform. If your business grows into more, optional packages can add extra marketing, reach, video, content and client app tools.</p>
+          <blockquote>You don’t need a studio to run a serious coaching business. You need a system that makes it easy to buy from you.</blockquote>
+        </div>
+        <article class="price-card" data-reveal>
+          <div class="price-label"><span>CORE by fibodo</span><b>Complete foundation</b></div>
+          <div class="price">£25<small>/ month</small></div>
+          <ul class="price-list">
+            <li>Bookings and scheduling</li>
+            <li>Payments, packs and memberships</li>
+            <li>Client management and messages</li>
+            <li>Your professional booking website</li>
+            <li>Optional packages when you want more</li>
+          </ul>
+          <a class="btn" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" data-cta="pricing">Start building with CORE <span aria-hidden="true">→</span></a>
+          <span class="microcopy">CORE is complete at £25/month. Package extras are optional.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow">Questions, answered</span>
+          <h2>Ready when you are.</h2>
+        </div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false">What type of coach is CORE for?<span aria-hidden="true">+</span></button><div class="faq-answer"><div><p>CORE is designed for independent trainers and coaches running one-to-one sessions, small groups, classes or a hybrid coaching business.</p></div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false">What is included in the £25 monthly price?<span aria-hidden="true">+</span></button><div class="faq-answer"><div><p>Your CORE foundation includes the essential tools covered above: bookings, payments, memberships, client management, messages and your booking website.</p></div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Do I need to buy the extra packages?<span aria-hidden="true">+</span></button><div class="faq-answer"><div><p>No. CORE is complete at £25/month. Packages are optional tools for coaches who want to add more power in specific areas such as marketing, reach, video, content or a client app.</p></div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Can clients book when I am not available?<span aria-hidden="true">+</span></button><div class="faq-answer"><div><p>Yes. Your booking website can take bookings around the clock, based on the availability, services and capacity you choose.</p></div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Can I use CORE for both one-to-one and group coaching?<span aria-hidden="true">+</span></button><div class="faq-answer"><div><p>Yes. You can set up different services and formats to reflect how you coach, including individual sessions and bookable group experiences.</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="container" data-reveal>
+        <h2>Make your coaching easier to book—and easier to grow.</h2>
+        <p>Set up what you sell. Share your link. Let clients book and pay. Run the business you came here to build.</p>
+        <a class="btn btn-dark" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" data-cta="final">Start with CORE for £25/month <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <a class="brand" href="#top"><img src="assets/logo.svg" alt="CORE by fibodo"></a>
+      <span>Run your business. Your way.</span>
+      <p>© 2026 fibodo Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" data-mobile-cta>
+    <span>Everything you need<strong>£25/month</strong></span>
+    <a class="btn" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" data-cta="mobile-sticky">Start with CORE</a>
+  </div>
+
+  <script>
+    const header = document.querySelector('[data-header]');
+    const mobileCta = document.querySelector('[data-mobile-cta]');
+    const menuButton = document.querySelector('.menu-button');
+    const nav = document.querySelector('.nav-links');
+
+    const updateChrome = () => {
+      header.classList.toggle('scrolled', window.scrollY > 12);
+      mobileCta.classList.toggle('visible', window.scrollY > 560 && window.scrollY < document.body.scrollHeight - window.innerHeight - 350);
+    };
+    updateChrome();
+    window.addEventListener('scroll', updateChrome, { passive: true });
+
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      menuButton.textContent = open ? 'Menu' : 'Close';
+      nav.classList.toggle('open', !open);
+      document.body.classList.toggle('menu-open', !open);
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = 'Menu';
+      nav.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    }));
+
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-question').forEach(item => item.setAttribute('aria-expanded', 'false'));
+        button.setAttribute('aria-expanded', String(!expanded));
+      });
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
