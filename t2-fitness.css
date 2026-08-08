@@ -217,6 +217,12 @@ h3 {
     flex: 0 1 200px
 }
 
+.t2-fitness-brand {
+    width: auto;
+    height: 58px;
+    max-height: 58px
+}
+
 .logo {
     width: 138px;
     height: auto
@@ -1001,6 +1007,13 @@ section {
     .t2-fitness-brand {
         flex-basis: 120px;
         max-width: 120px
+    }
+
+    .t2-fitness-brand {
+        flex-basis: auto;
+        width: auto;
+        height: 40px;
+        max-height: 40px
     }
 
     .brand-divider {
