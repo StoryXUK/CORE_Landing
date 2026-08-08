@@ -200,7 +200,7 @@ h3 {
 .forme-academy-brand {
     display: block;
     width: 100%;
-    max-width: 100px;
+    max-width: 50px;
     height: auto;
     object-fit: contain
 }
