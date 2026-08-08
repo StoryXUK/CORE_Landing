@@ -1,15 +1,15 @@
 :root {
-    --navy: #111827;
+    --navy: #211815;
     --blue: #f15a24;
-    --deep: #0b1220;
+    --deep: #130e0c;
     --cyan: #f15a24;
-    --cyan2: #ffd8c7;
-    --ink: #172033;
-    --muted: #667085;
-    --line: #dbe4f0;
-    --pale: #fff6f1;
+    --cyan2: #ad3510;
+    --ink: #241b18;
+    --muted: #746861;
+    --line: #e8ddd7;
+    --pale: #fff7f2;
     --white: #fff;
-    --shadow: 0 24px 70px rgba(15, 42, 34, .15);
+    --shadow: 0 24px 70px rgba(48, 25, 16, .15);
     --radius: 22px
 }
 
@@ -106,7 +106,7 @@ h3 {
     border-radius: 8px;
     padding: 16px 23px;
     background: var(--cyan);
-    color: #111827;
+    color: #211815;
     font-size: .83rem;
     font-weight: 900;
     letter-spacing: .045em;
@@ -119,12 +119,13 @@ h3 {
 .btn:hover {
     transform: translateY(-2px);
     background: var(--cyan2);
+    color: #fff;
     box-shadow: 0 18px 36px rgba(241, 90, 36, .33)
 }
 
 .btn:focus-visible,
 .faq-q:focus-visible {
-    outline: 3px solid #f2b84b;
+    outline: 3px solid #ad3510;
     outline-offset: 3px
 }
 
@@ -191,7 +192,7 @@ h3 {
 }
 
 .core-brand:focus-visible {
-    outline: 3px solid #f2b84b;
+    outline: 3px solid #ad3510;
     outline-offset: 5px
 }
 
@@ -263,7 +264,7 @@ h3 {
     flex-wrap: wrap;
     gap: 11px 24px;
     margin-top: 24px;
-    color: #52647b;
+    color: #6e625c;
     font-size: .86rem
 }
 
@@ -280,7 +281,7 @@ h3 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #e8f1ff;
+    background: #f7eee9;
     color: #f15a24;
     font-size: .72rem;
     font-weight: 900
@@ -288,7 +289,7 @@ h3 {
 
 .offer-card {
     position: relative;
-    background: linear-gradient(145deg, #1d5fc7, #164fae 65%, #0c3379);
+    background: linear-gradient(145deg, #f15a24, #ad3510 72%);
     color: #fff;
     padding: 31px;
     border-radius: var(--radius);
@@ -310,7 +311,7 @@ h3 {
 .tag {
     display: inline-block;
     background: var(--cyan);
-    color: #111827;
+    color: #211815;
     border-radius: 999px;
     padding: 8px 12px;
     font-size: .62rem;
@@ -339,7 +340,7 @@ h3 {
 
 .price-meta {
     font-size: .75rem;
-    color: #dbeafe;
+    color: #fff1e8;
     padding-bottom: 5px
 }
 
@@ -369,12 +370,12 @@ h3 {
 
 .micro {
     font-size: .73rem;
-    color: #c7d9f4;
+    color: #f4ddd1;
     margin: 5px 0 0
 }
 
 .trust-strip {
-    background: #f7f9fc;
+    background: #fbf8f5;
     border-block: 1px solid var(--line);
     padding: 19px 0
 }
@@ -384,7 +385,7 @@ h3 {
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    color: #344054;
+    color: #493d37;
     font-size: .78rem;
     font-weight: 750
 }
@@ -431,7 +432,7 @@ section {
 
 .benefit:hover {
     transform: translateY(-5px);
-    box-shadow: 0 16px 35px rgba(22, 131, 74, .09)
+    box-shadow: 0 16px 35px rgba(241, 90, 36, .12)
 }
 
 .benefit.featured {
@@ -464,7 +465,7 @@ section {
 }
 
 .featured p {
-    color: #d6e4f7
+    color: #eadbd2
 }
 
 .section-cta {
@@ -553,7 +554,7 @@ section {
 }
 
 .partner-panel.dark p {
-    color: #d6e4f7
+    color: #eadbd2
 }
 
 .together {
@@ -614,7 +615,7 @@ section {
 }
 
 .app-copy .lead {
-    color: #dbeafe
+    color: #f2e4dc
 }
 
 .app-list {
@@ -645,7 +646,7 @@ section {
 .phone {
     width: 290px;
     height: 570px;
-    border: 12px solid #08162c;
+    border: 12px solid #17110f;
     border-radius: 45px;
     background: #fff;
     box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
@@ -657,7 +658,7 @@ section {
 .notch {
     width: 80px;
     height: 20px;
-    background: #08162c;
+    background: #17110f;
     border-radius: 0 0 14px 14px;
     margin: -15px auto 22px
 }
@@ -665,7 +666,7 @@ section {
 .app-screen {
     height: calc(100% - 28px);
     border-radius: 25px;
-    background: linear-gradient(160deg, #eef5ff, #f7f9fc);
+    background: linear-gradient(160deg, #fff7f2, #fbf8f5);
     padding: 24px 18px
 }
 
@@ -690,7 +691,7 @@ section {
     border-radius: 12px;
     background: #fff;
     margin: 12px 0;
-    box-shadow: 0 8px 18px rgba(15, 42, 34, .08);
+    box-shadow: 0 8px 18px rgba(48, 25, 16, .08);
     border-left: 5px solid var(--cyan);
     padding: 14px
 }
@@ -743,8 +744,12 @@ section {
 }
 
 .final-cta {
-    background: linear-gradient(110deg, #0c2e67, #1d5fc7);
+    background: linear-gradient(110deg, #ad3510, #f15a24);
     color: #fff
+}
+
+.final-cta .eyebrow.light {
+    color: #fff1e8
 }
 
 .final-grid {
@@ -755,11 +760,11 @@ section {
 }
 
 .final-copy .lead {
-    color: #d6e4f7
+    color: #fff1e8
 }
 
 .final-card {
-    background: #1d5fc7;
+    background: #ad3510;
     border: 1px solid rgba(255, 255, 255, .13);
     padding: 28px;
     border-radius: 18px
@@ -780,22 +785,22 @@ section {
 .final-card .value {
     font-size: 1.6rem;
     font-weight: 900;
-    color: var(--cyan)
+    color: #fff
 }
 
 .final-card small {
-    color: #d6e4f7
+    color: #f4ddd1
 }
 
 .guarantee {
     font-size: .74rem;
-    color: #d6e4f7;
+    color: #f4ddd1;
     margin-top: 15px;
     text-align: center
 }
 
 .faq {
-    background: #fff6f1
+    background: #fff7f2
 }
 
 .faq-grid {
@@ -890,7 +895,7 @@ section {
     right: 0;
     padding: 10px 14px;
     background: rgba(255, 255, 255, .96);
-    box-shadow: 0 -8px 28px rgba(2, 31, 90, .14);
+    box-shadow: 0 -8px 28px rgba(48, 25, 16, .14);
     backdrop-filter: blur(12px)
 }
 
