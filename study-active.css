@@ -967,9 +967,14 @@ section {
 }
 
 .reveal {
-    opacity: 0;
-    transform: translateY(24px);
+    opacity: 1;
+    transform: none;
     transition: opacity .7s, transform .7s
+}
+
+.js .reveal {
+    opacity: 0;
+    transform: translateY(24px)
 }
 
 .reveal.in {
