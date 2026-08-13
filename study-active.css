@@ -615,23 +615,47 @@ section {
     color: #d2def2
 }
 
-.app-list {
-    display: grid;
-    gap: 15px;
+.app-features {
     margin: 30px 0
 }
 
-.app-list span {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: .92rem
+.app-features-intro {
+    margin: 0 0 16px;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700
 }
 
-.app-list span:before {
-    content: "✓";
-    color: var(--cyan);
-    font-weight: 900
+.app-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.app-list li {
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-top: 2px solid var(--cyan);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .06)
+}
+
+.app-list strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #fff;
+    font-size: .86rem;
+    letter-spacing: .01em
+}
+
+.app-list span {
+    display: block;
+    color: #d2def2;
+    font-size: .82rem;
+    line-height: 1.55
 }
 
 .phone-wrap {
@@ -1144,6 +1168,10 @@ section {
     }
 
     .outcomes {
+        grid-template-columns: 1fr
+    }
+
+    .app-list {
         grid-template-columns: 1fr
     }
 
