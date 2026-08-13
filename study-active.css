@@ -859,16 +859,16 @@ section {
     position: relative;
     display: block;
     width: min(240px, 100%);
-    aspect-ratio: 6.7;
+    aspect-ratio: 5.65;
     margin-bottom: 28px;
     overflow: hidden
 }
 
 .core-footer__logo img {
     position: absolute;
-    top: -237%;
-    left: -21.3%;
-    width: 124.6%;
+    top: -182%;
+    left: -18.5%;
+    width: 120%;
     max-width: none;
     height: auto
 }
