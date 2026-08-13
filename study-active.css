@@ -856,25 +856,21 @@ section {
 }
 
 .core-footer__logo {
-    display: inline-flex;
-    flex-direction: column;
+    position: relative;
+    display: block;
+    width: min(240px, 100%);
+    aspect-ratio: 6.7;
     margin-bottom: 28px;
-    line-height: .8
+    overflow: hidden
 }
 
-.core-footer__logo span {
-    font-size: clamp(2.6rem, 4vw, 4.3rem);
-    font-weight: 900;
-    letter-spacing: -.08em
-}
-
-.core-footer__logo small {
-    margin-top: 13px;
-    color: var(--footer-accent);
-    font-size: .76rem;
-    font-weight: 800;
-    letter-spacing: .16em;
-    text-transform: uppercase
+.core-footer__logo img {
+    position: absolute;
+    top: -237%;
+    left: -21.3%;
+    width: 124.6%;
+    max-width: none;
+    height: auto
 }
 
 .core-footer__brand p {
