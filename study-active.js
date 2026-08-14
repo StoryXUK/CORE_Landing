@@ -1,5 +1,5 @@
 (() => {
-  const REGISTRATION_URL = '#claim'; // Replace with the dedicated Study Active registration URL.
+  const REGISTRATION_URL = 'https://web.fibodo.com/signup/information?app=c1&p=study-active';
   document.querySelectorAll('[data-registration-link]').forEach(a => a.href = REGISTRATION_URL);
   document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => { const item = btn.closest('.faq-item'); const open = item.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); }));
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { threshold: .12 }) : null;
