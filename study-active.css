@@ -866,11 +866,12 @@ section {
 
 .core-footer__logo img {
     position: absolute;
-    top: -182%;
-    left: -18.5%;
+    top: 50%;
+    left: 50%;
     width: 120%;
     max-width: none;
-    height: auto
+    height: auto;
+    transform: translate(-50%, -50%)
 }
 
 .core-footer__brand p {
