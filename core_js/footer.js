@@ -9,7 +9,7 @@
     document.head.appendChild(stylesheet);
   }
 
-  footer.className = 'core-site-footer';
+  footer.className = 'fibodo-footer';
 
   fetch('footer.html')
     .then((response) => {
