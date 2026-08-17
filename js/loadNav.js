@@ -64,9 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load navigation and highlight correct nav item after it's inserted
   loadContent("navbar", "nav.html", highlightActiveNavItem);
 
-  // Load footer
-  loadContent("footer", "footer.html");
-
   loadContent("pricing", "pricing.html"); // Load the pricing
   loadContent("core-features", "core-features.html"); // Load the features
   loadContent("additional-features", "additional-features.html"); // Load the features

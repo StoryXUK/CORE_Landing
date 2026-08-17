@@ -9,26 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="core_css/navigation.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="https://core.fibodo.com/index.html" aria-label="CORE home">
-        <span class="brand-core">CORE</span><span class="brand-by">by</span><span class="brand-fibodo">fibodo</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
-      </button>
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a class="active" href="about.html" aria-current="page">About CORE</a>
-        <a href="index.html">Getting started</a>
-        <a href="#support">Help &amp; support</a>
-        <a class="button button-small button-outline" href="https://web.fibodo.com" target="_blank" rel="noopener">Log in to CORE</a>
-      </nav>
-    </div>
-  </header>
+  <header id="navbar" class="core-site-header"></header>
 
   <main id="main">
     <section class="hero">
@@ -170,13 +156,9 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <a class="brand" href="https://core.fibodo.com/index.html"><span class="brand-core">CORE</span><span class="brand-by">by</span><span class="brand-fibodo">fibodo</span></a>
-      <p>Bookings. Payments. Clients. All in one place.</p>
-      <nav aria-label="Footer navigation"><a href="about.html">About</a><a href="index.html">Getting started</a><a href="mailto:support@fibodo.com">Support</a></nav>
-    </div>
-  </footer>
+  <footer id="footer"></footer>
+  <script src="core_js/navigation.js"></script>
   <script src="about.js"></script>
+  <script src="core_js/footer.js"></script>
 </body>
 </html>

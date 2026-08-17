@@ -5,7 +5,7 @@
   const getCurrentPage = () => {
     const currentFile = window.location.pathname.split('/').pop() || 'index.html';
     if (currentFile === 'index.html') return 'home';
-    if (currentFile === 'about-us.html') return 'about';
+    if (currentFile === 'about.html' || currentFile === 'about-us.html') return 'about';
     if (currentFile === 'pricing.html') return 'pricing';
     return 'features';
   };
