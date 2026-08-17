@@ -62,3 +62,9 @@
     <p class="fibodo-footer__copy">© <span data-footer-year></span> fibodo Ltd. All rights reserved.</p>
   </div>
 </div>
+<script>
+  document.querySelectorAll('.fibodo-footer__container a').forEach(link => {
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+</script>
