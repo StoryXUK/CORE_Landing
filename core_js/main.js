@@ -264,10 +264,9 @@ function initBrushScriptGlitch() {
   if (!brushScript) return;
 
   const originalText = brushScript.textContent;
-  const offerText = 'Only £25.';
+  const offerText = 'Only £25';
   const transitionDuration = 420;
   const swapDelay = 170;
-  const offerDuration = 1000;
   brushScript.dataset.text = originalText;
 
   const setBrushText = (text, isOffer) => {
@@ -289,11 +288,7 @@ function initBrushScriptGlitch() {
   };
 
   window.setTimeout(() => {
-    transitionTo(offerText, true, () => {
-      window.setTimeout(() => {
-        transitionTo(originalText, false);
-      }, offerDuration);
-    });
+    transitionTo(offerText, true);
   }, 1500);
 }
 
