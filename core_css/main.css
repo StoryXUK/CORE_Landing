@@ -82,7 +82,8 @@ ul { margin: 0; padding: 0; }
 .brand img { display: block; width: 118px; height: auto; }
 .main-nav { display: flex; gap: 30px; align-items: center; font-size: 13px; font-weight: 800; color: rgba(16,25,22,.72); }
 .main-nav a { transition: color .18s ease, transform .18s ease; }
-.main-nav a:hover { color: var(--dark); transform: translateY(-1px); }
+.main-nav a:hover,
+.main-nav a[aria-current="page"] { color: var(--dark); transform: translateY(-1px); }
 .header-actions { display: flex; align-items: center; gap: 16px; }
 .login-link { font-size: 13px; font-weight: 850; color: var(--muted); }
 .header-cta,
