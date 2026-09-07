@@ -1,8 +1,10 @@
-(()=>{
-      const REGISTRATION_URL = '#claim'; // Replace with the dedicated Future Fit Training registration URL.
-      document.querySelectorAll('[data-registration-link]').forEach(a=>a.href=REGISTRATION_URL);
-      document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{const item=btn.closest('.faq-item');const open=item.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));}));
-      const io='IntersectionObserver' in window?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12}):null;
-      document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
-      document.querySelectorAll('.js-offer').forEach(a=>a.addEventListener('click',()=>window.dataLayer?.push({event:'future_fit_offer_click',cta:a.textContent.trim()})));
-    })();
+(() => {
+  document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => { const item = btn.closest('.faq-item'); const open = item.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); }));
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { threshold: .12 }) : null;
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+  document.querySelectorAll('.js-offer').forEach(a => a.addEventListener('click', () => window.dataLayer?.push({ event: 'fitpro_x_offer_click', cta: a.textContent.trim() })));
+  document.querySelectorAll('.core-footer a').forEach(link => {
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+})();
