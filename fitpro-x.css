@@ -217,7 +217,8 @@ h3 {
 }
 
 .educator-brand {
-    flex: 0 1 200px
+    flex: 0 1 200px;
+    transform: translateY(-10px)
 }
 
 .logo {
@@ -838,6 +839,11 @@ section {
     grid-template-rows: 1fr
 }
 
+.fibodo-footer .container {
+    width: min(100% - 48px, 1220px);
+    margin-inline: auto
+}
+
 .core-footer {
     --footer-bg: var(--deep);
     --footer-text: #fff;
@@ -1107,6 +1113,10 @@ section {
     .educator-brand {
         flex-basis: 120px;
         max-width: 120px
+    }
+
+    .educator-brand {
+        transform: translateY(-4px)
     }
 
     .brand-divider {
