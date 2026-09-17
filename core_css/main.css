@@ -2494,8 +2494,12 @@ p {
 
 /* Four-tier pricing: CORE / PLUS / PRO / ULTIMATE */
 .plans-section {
-  background: var(--cream);
-  color: var(--ink);
+  background:
+    radial-gradient(circle at 84% 10%, rgba(255, 90, 31, .12), transparent 24rem),
+    radial-gradient(circle at 12% 84%, rgba(230, 255, 46, .08), transparent 26rem),
+    var(--dark);
+  color: white;
+  overflow: hidden;
   scroll-margin-top: 100px;
 }
 
@@ -2522,13 +2526,13 @@ p {
 }
 
 .plans-heading h2 em {
-  color: var(--orange);
+  color: var(--lime);
 }
 
 .plans-heading>p {
   max-width: 590px;
   font-size: 18px;
-  color: #505d56;
+  color: var(--muted-dark);
   margin: 0;
 }
 
@@ -2542,6 +2546,7 @@ p {
 .plan-card {
   min-width: 0;
   background: var(--paper);
+  color: var(--ink);
   border: 1px solid #d9d9cf;
   border-radius: 24px;
   overflow: hidden;
@@ -2676,13 +2681,13 @@ p {
 
 .plans-note {
   font-size: 13px;
-  color: #505d56;
+  color: var(--muted-dark);
   margin: 24px 0 36px;
 }
 
 .plans-comparison {
-  border-top: 1px solid #c9cfc5;
-  border-bottom: 1px solid #c9cfc5;
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
 }
 
 .plans-comparison summary {
@@ -2722,7 +2727,7 @@ p {
 .plans-comparison caption {
   text-align: left;
   padding: 0 14px 20px;
-  color: #505d56;
+  color: var(--muted-dark);
 }
 
 .plans-comparison th,
@@ -2743,7 +2748,7 @@ p {
 }
 
 .plans-comparison tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, .45);
+  background: rgba(255, 255, 255, .06);
 }
 
 .pricing-sr-only {
