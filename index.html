@@ -13,9 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="core_css/main.css" />
-  <link rel="stylesheet" href="core_css/package-explainer.css" />
   <link rel="stylesheet" href="core_css/core-features-section.css" />
-  <link rel="stylesheet" href="core_css/bundle-builder.css" />
   <link rel="stylesheet" href="core_css/navigation.css" />
 </head>
 
@@ -183,355 +181,59 @@
       </div>
     </section>
 
-    <!-- <section id="packages" class="packages section-panel section-break">
-      <div class="container package-wrap reveal">
-        <div class="section-intro compact">
-          <span class="eyebrow">Turn it up.</span>
-          <h2>Build your CORE. Your way.</h2>
-          <p>CORE gives you the foundation. Business packages give specific parts of your business more power. Choose
-            what suits how you work now. Add more when the next big move calls.</p>
-        </div>
-        <div class="package-grid" id="packageGrid"></div>
-      </div>
-    </section> -->
-
-    <!-- /////////////////////////////// -->
-
-
-
-    <section id="package-explainer" class="package-explainer section-panel section-break"
-      aria-label="CORE business package explainer">
-      <div class="package-explainer-bg" aria-hidden="true"></div>
-      <div class="container package-explainer-wrap reveal">
-        <div class="package-explainer-top">
-          <div class="package-explainer-copy">
-            <span class="eyebrow">Turn it up.</span>
-            <h2>CORE is the foundation. Packages power the next move.</h2>
-            <p>Start with everything you need to run the business. Then add focused packages that strengthen the areas
-              you want to grow — client experience, marketing, discovery, video and content.</p>
+    <section id="pricing" class="plans-section section-panel section-break" aria-labelledby="plans-title">
+      <div class="container">
+        <span id="packages" class="plans-anchor" aria-hidden="true"></span>
+        <header class="plans-heading">
+          <span class="plan-eyebrow">YOUR BUSINESS. YOUR NEXT MOVE.</span>
+          <h2 id="plans-title">Start strong.<br><em>Grow your way.</em></h2>
+          <p>From your first booking to your own branded app. Choose the plan that fits where you are, and where you want to go.</p>
+        </header>
+        <div class="plans-grid"><article class="plan-card" aria-labelledby="plan-core">
+ <div class="plan-card-top"><span class="plan-kicker">GET STARTED</span>
+ <h3 id="plan-core">CORE</h3><p class="plan-description">The essentials to run your business.</p>
+ <p class="plan-price"><strong>£25</strong><span>/ month</span></p>
+ <p class="plan-setup">Monthly subscription</p>
+ <a class="plan-button" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" aria-label="Get started with CORE">Get started <span aria-hidden="true">↗</span></a></div>
+ <div class="plan-card-features"><p class="plan-inherits">Your everyday tools, connected.</p><ul><li>Bookings &amp; payments</li><li>Planner &amp; dynamic pricing</li><li>CRM &amp; marketing</li><li>Messages &amp; financial reports</li><li>Website &amp; free hosting</li><li>Memberships &amp; vouchers</li><li>Support</li></ul></div>
+ </article><article class="plan-card" aria-labelledby="plan-plus">
+ <div class="plan-card-top"><span class="plan-kicker">GET CONNECTED</span>
+ <h3 id="plan-plus">PLUS</h3><p class="plan-description">More ways to connect and earn.</p>
+ <p class="plan-price"><strong>£99</strong><span>/ month</span></p>
+ <p class="plan-setup">Monthly subscription</p>
+ <a class="plan-button" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" aria-label="Get started with PLUS">Get started <span aria-hidden="true">↗</span></a></div>
+ <div class="plan-card-features"><p class="plan-inherits">Everything in CORE, plus:</p><ul><li>Branded client app</li><li>OnDemand library</li><li>HD live streaming</li><li>Content manager</li><li>Analytics</li></ul></div>
+ </article><article class="plan-card plan-card-featured" aria-labelledby="plan-pro">
+ <div class="plan-card-top"><span class="plan-kicker">GROW FURTHER</span>
+ <h3 id="plan-pro">PRO</h3><p class="plan-description">Reach further. Build your business.</p>
+ <p class="plan-price"><strong>£199</strong><span>/ month</span></p>
+ <p class="plan-setup">Monthly subscription</p>
+ <a class="plan-button" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" aria-label="Get started with PRO">Get started <span aria-hidden="true">↗</span></a></div>
+ <div class="plan-card-features"><p class="plan-inherits">Everything in PLUS, plus:</p><ul><li>Lead generation</li><li>AI agent</li><li>Rewards</li><li>Store</li></ul></div>
+ </article><article class="plan-card" aria-labelledby="plan-ultimate">
+ <div class="plan-card-top"><span class="plan-kicker">MAKE IT YOURS</span>
+ <h3 id="plan-ultimate">ULTIMATE</h3><p class="plan-description">Your brand. Your own app.</p>
+ <p class="plan-price"><strong>£299</strong><span>/ month</span></p>
+ <p class="plan-setup">+ £999 one-off setup</p>
+ <a class="plan-button" href="https://web.fibodo.com/signup/information?app=c1" target="_blank" rel="noopener noreferrer" aria-label="Get started with ULTIMATE">Get started <span aria-hidden="true">↗</span></a></div>
+ <div class="plan-card-features"><p class="plan-inherits">Everything in PRO, plus:</p><ul><li>Custom app</li><li>Fully branded to your business</li><li>24/7 payments through your app</li><li>Personal QR code for downloads</li></ul></div>
+ </article></div>
+        <p class="plans-note">All prices shown per month. ULTIMATE includes a £999 one-off setup fee.</p>
+        <details class="plans-comparison">
+          <summary>Compare all plan features <span aria-hidden="true">+</span></summary>
+          <div class="plans-table-scroll" role="region" aria-label="Plan feature comparison" tabindex="0">
+            <table><caption>What's included in each plan</caption><thead><tr><th scope="col">Features</th><th scope="col">CORE</th><th scope="col">PLUS</th><th scope="col">PRO</th><th scope="col">ULTIMATE</th></tr></thead><tbody><tr><th scope="row">Bookings</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Payments</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Planner</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">CRM</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Marketing</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Messages</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Financial Reports</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Website</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Memberships (Subscriptions)</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Vouchers</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Dynamic Pricing</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Support</th><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Client App</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">OnDemand Library</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Live Streaming</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Content Manager</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Analytics</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Lead Gen</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">AI Agent</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Rewards</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Store</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr><tr><th scope="row">Custom App</th><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">—</span><span class="pricing-sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="pricing-sr-only">Included</span></td></tr></tbody></table>
           </div>
-
-          <aside class="package-explainer-panel" aria-label="Business package summary">
-            <span>Business packages</span>
-            <strong>5</strong>
-            <p>Optional power-ups. Built around how trainers actually grow.</p>
-          </aside>
-        </div>
-
-        <div class="package-explainer-grid" aria-label="CORE business package areas">
-          <article class="explainer-card" style="--accent:#9b5cff">
-            <span class="explainer-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <rect x="7" y="2" width="10" height="20" rx="2" />
-                <path d="M11 18h2M10 5h4" />
-              </svg>
-            </span>
-            <h3>Client App</h3>
-            <p>Put your business in every pocket and make repeat booking feel effortless.</p>
-            <small>Keep clients close</small>
-            <button class="explainer-learn-more" type="button" data-package-modal-open="client-app">Learn more</button>
-          </article>
-
-          <article class="explainer-card" style="--accent:#2488d4">
-            <span class="explainer-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m3 7 9 6 9-6" />
-              </svg>
-            </span>
-            <h3>Marketing</h3>
-            <p>Create offers, send campaigns and bring clients back when the next opportunity lands.</p>
-            <small>Keep your diary moving</small>
-            <button class="explainer-learn-more" type="button" data-package-modal-open="marketing">Learn more</button>
-          </article>
-
-          <article class="explainer-card" style="--accent:#34c987">
-            <span class="explainer-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="7" />
-                <path d="m16.5 16.5 4 4" />
-                <path d="M11 8v6M8 11h6" />
-              </svg>
-            </span>
-            <h3>Reach</h3>
-            <p>Show up beyond your own followers and help new clients discover what you do.</p>
-            <small>Find the next booking</small>
-            <button class="explainer-learn-more" type="button" data-package-modal-open="reach">Learn more</button>
-          </article>
-
-          <article class="explainer-card" style="--accent:#ff8a1f">
-            <span class="explainer-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m10 9 5 3-5 3Z" />
-              </svg>
-            </span>
-            <h3>Video</h3>
-            <p>Go live, sell on-demand and turn your expertise into another way to earn.</p>
-            <small>Earn beyond the room</small>
-            <button class="explainer-learn-more" type="button" data-package-modal-open="video">Learn more</button>
-          </article>
-
-          <article class="explainer-card" style="--accent:#20c7b5">
-            <span class="explainer-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M6 3h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
-                <path d="M8 8h8M8 12h8M8 16h5" />
-              </svg>
-            </span>
-            <h3>Content</h3>
-            <p>Share plans, timetables and value that keeps clients switched on between sessions.</p>
-            <small>Keep value moving</small>
-            <button class="explainer-learn-more" type="button" data-package-modal-open="content">Learn more</button>
-          </article>
-        </div>
-
-        <div class="package-explainer-footer">
-          <p><strong>CORE stays complete at £25/month.</strong> Packages are not upgrades from a basic plan. They are
-            focused tools for the parts of your business you want to turn up.</p>
-          <a class="btn btn-outline-lime" href="https://web.fibodo.com/signup/information?app=c1" target="_blank"
-            rel="noopener noreferrer">Build your CORE setup</a>
-        </div>
-      </div>
-      <div class="package-modal" data-package-modal hidden>
-        <div class="package-modal-backdrop" data-package-modal-close></div>
-        <section class="package-modal-panel" role="dialog" aria-modal="true" aria-labelledby="packageModalTitle"
-          aria-describedby="packageModalCopy" tabindex="-1">
-          <button class="package-modal-close" type="button" data-package-modal-close
-            aria-label="Close package details">×</button>
-          <span class="package-modal-kicker" data-package-modal-kicker></span>
-          <h3 id="packageModalTitle" data-package-modal-title></h3>
-          <p id="packageModalCopy" data-package-modal-copy></p>
-          <ul class="package-modal-list" data-package-modal-list></ul>
-          <a class="package-modal-cta" href="https://web.fibodo.com/signup/information?app=c1" target="_blank"
-            rel="noopener noreferrer" data-package-modal-close>Build your package</a>
-        </section>
+        </details>
       </div>
     </section>
 
-
-    <section id="packages" class="core-packages core-five-builder section-panel section-break"
-      aria-label="CORE package builder">
-      <div class="container" data-core-builder>
-        <div class="core-five-hero reveal">
-          <div class="core-five-copy">
-            <span class="eyebrow">Pick the power that fits your next move.</span>
-            <h2>Start with CORE. Turn up what matters.</h2>
-            <p>CORE starts at £25/month. Add only the business packages that move your business forward. Bundle pricing
-              applies automatically as you build.</p>
-          </div>
-        </div>
-
-        <div class="core-five-grid reveal" aria-label="Choose CORE business packages">
-          <article class="core-package-tile" data-package-card="client-app" style="--accent:#9b5cff" tabindex="0"
-            role="button" aria-pressed="false">
-            <div class="tile-glow"></div>
-            <div class="tile-top">
-              <span class="tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="7" y="2" width="10" height="20" rx="2" />
-                  <path d="M11 18h2M10 5h4" />
-                </svg>
-              </span>
-              <span class="tile-state">Add</span>
-            </div>
-            <span class="tile-kicker">Keep clients close</span>
-            <h3>Client App</h3>
-            <p>Your business in every pocket. Make repeat booking feel effortless.</p>
-            <input type="checkbox" value="client-app" data-package-input aria-label="Add Client App to CORE">
-          </article>
-
-          <article class="core-package-tile" data-package-card="marketing" style="--accent:#2488d4" tabindex="0"
-            role="button" aria-pressed="false">
-            <div class="tile-glow"></div>
-            <div class="tile-top">
-              <span class="tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <path d="m3 7 9 6 9-6" />
-                </svg>
-              </span>
-              <span class="tile-state">Add</span>
-            </div>
-            <span class="tile-kicker">Keep your diary moving</span>
-            <h3>Marketing</h3>
-            <p>Create offers, send campaigns and bring clients back.</p>
-            <input type="checkbox" value="marketing" data-package-input aria-label="Add Marketing to CORE">
-          </article>
-
-          <article class="core-package-tile" data-package-card="reach" style="--accent:#34c987" tabindex="0"
-            role="button" aria-pressed="false">
-            <div class="tile-glow"></div>
-            <div class="tile-top">
-              <span class="tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="11" cy="11" r="7" />
-                  <path d="m16.5 16.5 4 4" />
-                  <path d="M11 8v6M8 11h6" />
-                </svg>
-              </span>
-              <span class="tile-state">Add</span>
-            </div>
-            <span class="tile-kicker">Reach more clients</span>
-            <h3>Reach</h3>
-            <p>Get discovered beyond your own followers.</p>
-            <input type="checkbox" value="reach" data-package-input aria-label="Add Reach to CORE">
-          </article>
-
-          <article class="core-package-tile" data-package-card="video" style="--accent:#ff8a1f" tabindex="0"
-            role="button" aria-pressed="false">
-            <div class="tile-glow"></div>
-            <div class="tile-top">
-              <span class="tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <path d="m10 9 5 3-5 3Z" />
-                </svg>
-              </span>
-              <span class="tile-state">Add</span>
-            </div>
-            <span class="tile-kicker">Earn beyond the room</span>
-            <h3>Video</h3>
-            <p>Go live, sell on-demand and extend your expertise.</p>
-            <input type="checkbox" value="video" data-package-input aria-label="Add Video to CORE">
-          </article>
-
-          <article class="core-package-tile" data-package-card="content" style="--accent:#20c7b5" tabindex="0"
-            role="button" aria-pressed="false">
-            <div class="tile-glow"></div>
-            <div class="tile-top">
-              <span class="tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M6 3h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
-                  <path d="M8 8h8M8 12h8M8 16h5" />
-                </svg>
-              </span>
-              <span class="tile-state">Add</span>
-            </div>
-            <span class="tile-kicker">Keep clients switched on</span>
-            <h3>Content</h3>
-            <p>Share plans, timetables and value between sessions.</p>
-            <input type="checkbox" value="content" data-package-input aria-label="Add Content to CORE">
-          </article>
-        </div>
-
-        <div class="core-builder-bottom reveal" aria-label="CORE bundle pricing and selected package total">
-          <aside class="core-price-panel" aria-label="Your CORE package total">
-            <div class="price-panel-top">
-              <span class="eyebrow">Your CORE</span>
-              <span class="package-count"><strong id="bundleCount">0</strong>/5</span>
-            </div>
-
-            <div class="price-total">
-              <strong id="bundleTotal">£25</strong>
-              <span>/ month</span>
-            </div>
-
-            <p id="bundleLine">CORE only. Everything you need to get booked, get paid and keep moving.</p>
-
-            <div class="price-stack">
-              <div><span>CORE</span><strong>£25</strong></div>
-              <div><span>Packages</span><strong id="packageTotal">£0</strong></div>
-              <div><span>Bundle advantage</span><strong id="bundleSaving">£0</strong></div>
-            </div>
-
-            <div class="bundle-progress" aria-hidden="true"><i id="bundleProgress"></i></div>
-
-            <div class="price-actions">
-              <button class="core-mini-action" type="button" data-bundle-action="clear">CORE only</button>
-              <button class="core-mini-action is-dark" type="button" data-bundle-action="all">All packages</button>
-            </div>
-
-            <a class="btn btn-primary core-price-cta" href="https://web.fibodo.com/signup/information?app=c1"
-              target="_blank" rel="noopener noreferrer">Start with this setup</a>
-            <small class="price-note">Prices shown monthly. VAT treatment should be stated clearly at checkout.</small>
-          </aside>
-
-          <aside class="bundle-value-panel" aria-label="Bundle pricing explanation">
-            <span class="eyebrow">Bundle pricing</span>
-            <h3>The more you build, the better the value.</h3>
-            <p>Start with CORE, then add the packages that fit your next move. Your price updates automatically as your
-              setup grows.</p>
-
-            <div class="bundle-rate-grid" aria-label="CORE bundle pricing table">
-              <div class="bundle-rate is-base"><span>CORE only</span><strong>£25</strong></div>
-              <div class="bundle-rate"><span>+ 1 package</span><strong>£45</strong></div>
-              <div class="bundle-rate"><span>+ 2 packages</span><strong>£60</strong></div>
-              <div class="bundle-rate"><span>+ 3 packages</span><strong>£70</strong></div>
-              <div class="bundle-rate is-highlight"><span>+ 4 packages</span><strong>£75</strong></div>
-              <div class="bundle-rate is-best"><span>All 5</span><strong>£80</strong></div>
-            </div>
-
-            <div class="bundle-value-note">
-              <strong>All five packages are £55/month.</strong>
-              <span>The fifth package is £5/month, with bundle pricing applied automatically.</span>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-
-
-
-
-    <!-- /////////////////////////////// -->
-
-
-
-
-    <!-- <section class="premium section-panel">
-      <div class="container premium-grid reveal">
-        <div class="premium-image" aria-hidden="true"></div>
-        <div class="premium-copy">
-          <span class="eyebrow">Go full headline.</span>
-          <h2>Your name. Your app. Your website.</h2>
-          <p>For trainers, creators and studios ready to build a brand people recognise. A bespoke website. A branded
-            app. A customer experience that looks, feels and works like yours.</p>
-          <a class="btn btn-outline-lime" href="https://web.fibodo.com/signup/information?app=c1" target="_blank"
-            rel="noopener noreferrer">Explore Your Own App & Website</a>
-        </div>
-        <div class="premium-device"><b>Your Brand</b><span>Book a Session</span><i></i></div>
-      </div>
-    </section> -->
-
-    <section id="pricing" class="final-cta section-panel section-break">
-      <div class="container final-grid reveal">
-        <div>
-          <span class="eyebrow">Built to move with you.</span>
-          <h2>Start with CORE. <em>Build something worth following.</em></h2>
-          <p class="section-copy">Set up what you sell. Take payment. Share your booking link. Invite your clients. Then
-            keep building the business you came here to build.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://web.fibodo.com/signup/information?app=c1" target="_blank"
-              rel="noopener noreferrer">Start with CORE</a>
-            <a class="btn btn-ghost" href="https://web.fibodo.com/signup/information?app=c1" target="_blank"
-              rel="noopener noreferrer">See everything CORE includes</a>
-          </div>
-        </div>
-        <article class="price-card glass-panel">
-          <span>CORE by fibodo</span>
-          <strong>£25<small>/month</small></strong>
-          <p>Bookings. Payments. Memberships. Clients. Your website.</p>
-          <ul>
-            <li>CORE is complete at £25/month</li>
-            <li>Business packages are optional</li>
-            <li>Only pay for what you use</li>
-          </ul>
-          <a class="btn btn-primary" href="https://web.fibodo.com/signup/information?app=c1" target="_blank"
-            rel="noopener noreferrer">Start with CORE</a>
-        </article>
-      </div>
-    </section>
-
-    
   </main>
 
   <footer id="footer"></footer>
 
   <script src="core_js/navigation.js"></script>
   <script src="core_js/main.js"></script>
-  <script src="core_js/bundle-builder.js"></script>
   <script src="core_js/footer.js"></script>
 </body>
 
