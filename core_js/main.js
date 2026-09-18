@@ -264,7 +264,7 @@ function initBrushScriptGlitch() {
   if (!brushScript) return;
 
   const originalText = brushScript.textContent;
-  const offerText = 'Only £25';
+  const offerText = 'From £25';
   const transitionDuration = 420;
   const swapDelay = 170;
   brushScript.dataset.text = originalText;
