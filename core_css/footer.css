@@ -15,10 +15,10 @@
 .fibodo-footer *::after { box-sizing: border-box; }
 
 .fibodo-footer__container {
-  width: 100%;
-  max-width: 1200px;
+  width: min(calc(100% - 48px), 1220px);
+  max-width: none;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0;
 }
 
 .fibodo-footer__grid {

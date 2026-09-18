@@ -1,6 +1,7 @@
 // Function to load content dynamically, with optional callback
 function loadContent(elementId, file, callback) {
   const element = document.getElementById(elementId);
+  if (!element) return;
 
   fetch(file)
     .then((response) => {

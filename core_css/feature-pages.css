@@ -293,6 +293,22 @@ body ::selection { background: var(--lime); color: var(--dark); }
 .directory-card__number { color: rgba(16, 25, 22, .35); font-size: 11px; font-weight: 950; letter-spacing: .14em; }
 .directory-card h3 { margin: 42px 0 12px; color: var(--ink); font-size: 28px; font-weight: 950; letter-spacing: -.055em; line-height: 1; }
 .directory-card p { margin: 0 0 28px; color: var(--muted); }
+.directory-card__availability {
+  align-self: flex-start;
+  margin-top: auto;
+  margin-bottom: 15px;
+  padding: 7px 10px;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 9%, white);
+  color: color-mix(in srgb, var(--accent) 75%, var(--ink));
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.directory-card__detail { margin-top: auto; color: var(--muted); font-size: 12px; font-weight: 750; line-height: 1.55; }
+.directory-card--static:hover { transform: none; border-color: var(--line); box-shadow: var(--shadow); }
 .directory-card__link { margin-top: auto; color: var(--accent); font-size: 14px; font-weight: 950; }
 
 .core-site-footer { background: var(--dark); color: #fff; }
