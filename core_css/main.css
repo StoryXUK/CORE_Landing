@@ -2492,7 +2492,7 @@ p {
 }
 
 
-/* Four-tier pricing: CORE / PLUS / PRO / ULTIMATE */
+/* Pricing tiers: CORE Free / CORE / PLUS / PRO, with ULTIMATE below */
 .plans-section {
   background:
     radial-gradient(circle at 84% 10%, rgba(255, 90, 31, .12), transparent 24rem),
@@ -2679,6 +2679,124 @@ p {
   border-color: rgba(16, 25, 22, .22);
 }
 
+.plan-card-free {
+  border-color: rgba(230, 255, 46, .7);
+  background:
+    linear-gradient(145deg, rgba(230, 255, 46, .18), transparent 48%),
+    var(--paper);
+}
+
+.plan-card-free .plan-kicker {
+  color: #526300;
+}
+
+.plan-card-free .plan-price strong {
+  color: #344000;
+}
+
+.plan-ultimate {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(180px, .65fr) minmax(260px, .9fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  margin-top: 22px;
+  padding: clamp(30px, 5vw, 58px);
+  overflow: hidden;
+  border: 1px solid rgba(230, 255, 46, .55);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(230, 255, 46, .2), transparent 19rem),
+    linear-gradient(120deg, #17231d 0%, #0d120f 68%);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .22);
+}
+
+.plan-ultimate::after {
+  content: "ULTIMATE";
+  position: absolute;
+  right: -18px;
+  bottom: -36px;
+  color: rgba(255, 255, 255, .035);
+  font-size: clamp(76px, 13vw, 180px);
+  font-weight: 900;
+  letter-spacing: -.08em;
+  pointer-events: none;
+}
+
+.plan-ultimate > * {
+  position: relative;
+  z-index: 1;
+}
+
+.plan-ultimate .plan-kicker {
+  margin-bottom: 16px;
+  color: var(--lime);
+}
+
+.plan-ultimate h3 {
+  margin: 0 0 12px;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: .95;
+  letter-spacing: -.06em;
+}
+
+.plan-ultimate .plan-description,
+.plan-ultimate .plan-inherits {
+  margin: 0;
+  color: var(--muted-dark);
+}
+
+.plan-ultimate .plan-price {
+  color: var(--lime);
+}
+
+.plan-ultimate .plan-price strong {
+  font-size: clamp(48px, 6vw, 76px);
+}
+
+.plan-ultimate .plan-setup {
+  min-height: 0;
+  margin: 10px 0 0;
+  color: var(--muted-dark);
+}
+
+.plan-ultimate-features {
+  display: grid;
+  gap: 20px;
+}
+
+.plan-ultimate-features ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-ultimate-features li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+}
+
+.plan-ultimate-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--lime);
+  font-weight: 900;
+}
+
+.plan-ultimate .plan-button {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.plan-ultimate .plan-button:hover {
+  background: #f0ff77;
+}
+
 .plans-note {
   font-size: 13px;
   color: var(--muted-dark);
@@ -2772,6 +2890,14 @@ p {
   .plan-description {
     min-height: 44px;
   }
+
+  .plan-ultimate {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .plan-ultimate-features {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2799,5 +2925,14 @@ p {
 
   .plans-section {
     padding-block: 72px;
+  }
+
+  .plan-ultimate {
+    grid-template-columns: 1fr;
+    padding: 30px 26px;
+  }
+
+  .plan-ultimate-features {
+    grid-column: auto;
   }
 }
