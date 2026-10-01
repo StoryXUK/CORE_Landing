@@ -1245,7 +1245,6 @@ section {
 
 /* CORE Plus inclusions */
 .plus-included {
-    margin-top: clamp(32px, 5vw, 64px);
     background: #f7f9fc;
 }
 .plus-feature-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
@@ -1281,3 +1280,5 @@ section {
 @media (max-width: 620px) {
     .plus-offer-strip .btn { width: 100%; }
 }
+
+.pb50 {padding-bottom: 50px;}
