@@ -480,22 +480,50 @@ section {
 }
 
 .bridge {
-    overflow: hidden
+    position: relative;
+    overflow: hidden;
+    border-block: 1px solid rgba(219, 228, 240, .8);
+    background:
+        radial-gradient(circle at 8% 16%, rgba(255, 76, 97, .08), transparent 28%),
+        linear-gradient(135deg, #fff 0%, #fbfcff 58%, #f7f9fc 100%)
+}
+
+.bridge::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: -180px;
+    bottom: -190px;
+    border: 55px solid rgba(255, 76, 97, .05);
+    border-radius: 50%
 }
 
 .bridge-grid {
+    position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: .85fr 1.15fr;
-    gap: 70px;
-    align-items: center
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: clamp(52px, 6vw, 88px);
+    align-items: stretch
 }
 
 .photo {
     position: relative;
-    border-radius: 22px;
+    isolation: isolate;
+    border-radius: 26px;
     overflow: hidden;
-    min-height: 580px;
-    box-shadow: var(--shadow)
+    min-height: 720px;
+    border: 1px solid rgba(255, 255, 255, .8);
+    box-shadow: 0 30px 80px rgba(15, 42, 34, .18)
+}
+
+.photo::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 45% 0 0;
+    background: linear-gradient(to bottom, transparent, rgba(11, 18, 32, .48))
 }
 
 .photo img {
@@ -508,32 +536,63 @@ section {
 
 .photo-label {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, .93);
-    backdrop-filter: blur(10px);
-    padding: 16px 18px;
-    border-radius: 11px;
+    z-index: 2;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    max-width: 430px;
+    background: rgba(17, 24, 39, .88);
+    backdrop-filter: blur(14px);
+    padding: 18px 20px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 14px;
     font-weight: 850;
-    color: var(--navy)
+    color: #fff
+}
+
+.bridge-copy {
+    align-self: center;
+    min-width: 0;
+    padding: 8px 0
+}
+
+.bridge-copy h2 {
+    max-width: 620px;
+    margin-bottom: 22px;
+    font-size: clamp(2.8rem, 4.5vw, 4.65rem)
 }
 
 .bridge-copy .lead {
-    margin-bottom: 33px
+    max-width: 650px;
+    margin-bottom: 34px;
+    color: #536078
 }
 
 .partnership {
     display: grid;
-    grid-template-columns: 1fr 58px 1fr;
+    grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr);
     align-items: stretch;
-    gap: 13px
+    gap: 0
 }
 
 .partner-panel {
+    position: relative;
     border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 23px
+    border-radius: 16px;
+    padding: 26px 24px 24px;
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 14px 38px rgba(15, 42, 34, .06)
+}
+
+.partner-panel::before {
+    content: "Education";
+    display: block;
+    margin-bottom: 18px;
+    color: var(--blue);
+    font-size: .62rem;
+    font-weight: 900;
+    letter-spacing: .13em;
+    text-transform: uppercase
 }
 
 .partner-panel.dark {
@@ -542,8 +601,14 @@ section {
     border-color: var(--navy)
 }
 
+.partner-panel.dark::before {
+    content: "Business tools";
+    color: var(--cyan2)
+}
+
 .partner-panel h3 {
-    font-size: 1rem
+    margin-bottom: 10px;
+    font-size: 1.04rem
 }
 
 .partner-panel p {
@@ -558,9 +623,19 @@ section {
 
 .together {
     align-self: center;
-    text-align: center;
+    justify-self: center;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 34px;
+    margin-inline: -1px;
+    border: 1px solid #ffd4da;
+    border-radius: 999px;
+    background: #fff6f7;
+    box-shadow: 0 8px 24px rgba(255, 76, 97, .12);
     color: var(--blue);
-    font-size: .61rem;
+    font-size: .52rem;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: .08em
@@ -709,36 +784,73 @@ section {
     background: #fff
 }
 
+.bridge-steps {
+    margin-top: 34px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line)
+}
+
+.bridge-steps-title {
+    margin-bottom: 16px;
+    color: var(--navy);
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
 .step-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    grid-template-columns: 1fr;
+    gap: 12px;
     counter-reset: steps
 }
 
 .step {
+    position: relative;
     counter-increment: steps;
-    padding: 30px;
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+    padding: 18px 20px;
     border: 1px solid var(--line);
-    border-radius: 16px
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .88);
+    box-shadow: 0 10px 26px rgba(15, 42, 34, .045)
+}
+
+.step::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--blue)
 }
 
 .step:before {
     content: "0" counter(steps);
-    display: block;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: #fff0f2;
     color: var(--cyan);
-    font-size: 2.2rem;
+    font-size: 1rem;
     font-weight: 900;
-    margin-bottom: 35px
+    letter-spacing: .04em
 }
 
 .step h3 {
-    font-size: 1.05rem
+    margin-bottom: 5px;
+    font-size: 1rem
 }
 
 .step p {
     color: var(--muted);
-    font-size: .9rem;
+    font-size: .86rem;
     margin: 0
 }
 
@@ -943,8 +1055,7 @@ section {
     }
 
     .photo {
-        min-height: 500px;
-        order: 2
+        min-height: 540px
     }
 
     .app-copy {
@@ -963,24 +1074,6 @@ section {
         max-width: 650px
     }
 
-    .step-grid {
-        grid-template-columns: 1fr
-    }
-
-    .step {
-        display: grid;
-        grid-template-columns: 65px 1fr;
-        column-gap: 10px
-    }
-
-    .step:before {
-        grid-row: 1/3;
-        margin: 0
-    }
-
-    .step h3 {
-        margin-top: 5px
-    }
 }
 
 @media(max-width:620px) {
@@ -1069,7 +1162,7 @@ section {
     }
 
     .together {
-        padding: 3px
+        margin-block: -7px
     }
 
     .outcomes {
@@ -1078,6 +1171,33 @@ section {
 
     .photo {
         min-height: 430px
+    }
+
+    .photo-label {
+        right: 16px;
+        bottom: 16px;
+        left: 16px;
+        padding: 15px 16px;
+        font-size: .88rem
+    }
+
+    .bridge-copy h2 {
+        font-size: clamp(2.55rem, 13vw, 3.4rem)
+    }
+
+    .partner-panel {
+        padding: 23px 21px
+    }
+
+    .step {
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 14px;
+        padding: 16px
+    }
+
+    .step:before {
+        width: 44px;
+        height: 44px
     }
 
     .phone {
@@ -1123,8 +1243,11 @@ section {
     }
 }
 
-/* CORE PLUS inclusions */
-.plus-included { background: #f7f9fc; }
+/* CORE Plus inclusions */
+.plus-included {
+    margin-top: clamp(32px, 5vw, 64px);
+    background: #f7f9fc;
+}
 .plus-feature-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .plus-feature { padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); min-width: 0; }
 .plus-feature-label { display: block; margin-bottom: 24px; color: #9c293a; font-size: .7rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
