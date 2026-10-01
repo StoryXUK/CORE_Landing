@@ -12,7 +12,7 @@ pages_data = {
         "main_p1": "Great offers shouldn't be hard work.",
         "main_p2": "Most independent professionals rely on spreadsheets or third-party tools to run promotions — which makes it hard to track, manage, or measure results.",
         "main_p3": "The fibodo Vouchers Module brings everything together in one place, helping you create and manage digital vouchers that connect directly to your products, memberships, and client accounts.",
-        "features_title": "Core Features",
+        "features_title": "CORE Features",
         "features": [
             ("Easy Voucher Creation", "Design and issue vouchers in seconds — fixed value, percentage discount, or custom offers."),
             ("Seamless Redemption", "Clients can redeem vouchers instantly at checkout or via their app — no codes or admin needed."),
