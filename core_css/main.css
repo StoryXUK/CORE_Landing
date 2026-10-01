@@ -2838,7 +2838,7 @@ p {
 .plans-comparison table {
   border-collapse: collapse;
   width: 100%;
-  min-width: 650px;
+  min-width: 780px;
   font-size: 14px;
 }
 
@@ -2857,7 +2857,7 @@ p {
 
 .plans-comparison th:first-child {
   text-align: left;
-  width: 36%;
+  width: 30%;
 }
 
 .plans-comparison thead {
