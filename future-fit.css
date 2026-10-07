@@ -722,6 +722,12 @@ h3 {
     white-space: nowrap
 }
 
+.free-section-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 34px
+}
+
 section {
     padding: 105px 0
 }
@@ -1806,6 +1812,10 @@ section {
 
     .free-positioning-cta {
         grid-column: auto;
+        width: 100%
+    }
+
+    .free-section-cta .btn {
         width: 100%
     }
 
