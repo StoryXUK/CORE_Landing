@@ -1671,7 +1671,7 @@ section {
 .plus-feature-app h3 { font-size: clamp(1.8rem, 3vw, 2.55rem); }
 .plus-feature-app p { color: #d6e4f7; }
 .plus-included-label { margin-top: auto; padding-top: 36px; color: var(--cyan2); font-size: .78rem; font-weight: 800; }
-.plus-foundation { display: grid; gap: 28px; margin-top: 28px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: white; }
+.plus-foundation { display: grid; gap: 28px; margin: 28px 0 18px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: white; }
 .plus-foundation .eyebrow { color: #9c293a; margin-bottom: 12px; }
 .plus-foundation h3 { font-size: 1.45rem; margin-bottom: 12px; }
 .plus-foundation p:last-child { color: var(--muted); margin-bottom: 0; }
