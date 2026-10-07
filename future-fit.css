@@ -731,6 +731,137 @@ section {
     margin-bottom: 48px
 }
 
+.comparison-section {
+    background: #fff
+}
+
+.comparison-table-wrap {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: 0 22px 60px rgba(15, 42, 34, .08)
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 20px 24px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: middle
+}
+
+.comparison-table tr > :last-child {
+    border-right: 0
+}
+
+.comparison-table tbody tr:last-child > * {
+    border-bottom: 0
+}
+
+.comparison-table thead th {
+    background: var(--navy);
+    color: #fff;
+    font-size: 1rem
+}
+
+.comparison-table thead th:first-child,
+.comparison-table tbody th {
+    width: 38%
+}
+
+.comparison-table thead th:not(:first-child) {
+    width: 31%
+}
+
+.comparison-table thead th span {
+    display: block;
+    margin-top: 3px;
+    color: var(--cyan2);
+    font-size: .65rem;
+    font-weight: 850;
+    letter-spacing: .08em;
+    text-transform: uppercase
+}
+
+.comparison-table tbody th {
+    background: #f8fafc;
+    color: var(--ink);
+    font-size: .88rem
+}
+
+.comparison-table tbody td {
+    color: var(--muted);
+    font-size: .9rem
+}
+
+.comparison-table tbody td:last-child {
+    background: rgba(255, 76, 97, .035)
+}
+
+.comparison-included {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+    font-weight: 800
+}
+
+.comparison-included::before {
+    content: "✓";
+    color: var(--blue);
+    font-weight: 950
+}
+
+.comparison-unavailable {
+    color: #98a2b3;
+    font-size: 1.25rem
+}
+
+.comparison-price-row td strong {
+    color: var(--ink);
+    font-size: 2rem;
+    letter-spacing: -.04em
+}
+
+.comparison-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 190px;
+    padding: 13px 16px;
+    border-radius: 8px;
+    background: var(--navy);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: .035em;
+    text-transform: uppercase;
+    transition: transform .2s, background .2s
+}
+
+.comparison-link-free {
+    background: var(--cyan);
+    color: var(--navy)
+}
+
+.comparison-link:hover {
+    transform: translateY(-2px);
+    background: var(--blue)
+}
+
+.comparison-link:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 3px
+}
+
 .benefits {
     background: var(--pale)
 }
@@ -1555,6 +1686,82 @@ section {
     .free-positioning-cta {
         grid-column: auto;
         width: 100%
+    }
+
+    .comparison-table-wrap {
+        border-radius: 16px
+    }
+
+    .comparison-table,
+    .comparison-table thead,
+    .comparison-table tbody {
+        display: block
+    }
+
+    .comparison-table thead tr,
+    .comparison-table tbody tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .comparison-table thead th:first-child {
+        display: none
+    }
+
+    .comparison-table thead th,
+    .comparison-table thead th:not(:first-child),
+    .comparison-table tbody th {
+        width: auto
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 14px 12px;
+        border-right: 0;
+        border-bottom: 0;
+        font-size: .78rem
+    }
+
+    .comparison-table thead th + th {
+        border-left: 1px solid rgba(255, 255, 255, .16)
+    }
+
+    .comparison-table tbody tr {
+        border-bottom: 1px solid var(--line)
+    }
+
+    .comparison-table tbody tr:last-child {
+        border-bottom: 0
+    }
+
+    .comparison-table tbody th {
+        grid-column: 1 / -1;
+        border-bottom: 1px solid var(--line)
+    }
+
+    .comparison-table tbody td + td {
+        border-left: 1px solid var(--line)
+    }
+
+    .comparison-table thead th {
+        font-size: .82rem
+    }
+
+    .comparison-included {
+        align-items: flex-start;
+        gap: 5px;
+        font-size: .75rem
+    }
+
+    .comparison-price-row td strong {
+        font-size: 1.65rem
+    }
+
+    .comparison-link {
+        width: 100%;
+        min-width: 0;
+        padding: 11px 10px;
+        font-size: .65rem
     }
 
     .benefit-grid {
