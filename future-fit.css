@@ -549,6 +549,14 @@ h3 {
     border-left: 1px solid var(--line)
 }
 
+.free-feature:nth-child(n + 4) {
+    border-top: 1px solid var(--line)
+}
+
+.free-feature:nth-child(3n + 1) {
+    border-left: 0
+}
+
 .free-feature-number {
     display: inline-grid;
     place-items: center;
